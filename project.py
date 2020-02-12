@@ -17,7 +17,7 @@ def create_candidate_item_set(dataset_file):
 
       for item in num_list:
         candidate_item_list[item] += 1
-
+  #print(baskets)
   return candidate_item_list, baskets
 
 
@@ -26,6 +26,7 @@ def create_frequent_item_set(item_list, min_threshold):
 
   # delete items that dont meet min threshold
   for key, value in list(item_list.items()):
+   
     if value < min_threshold:
       del item_list[key]
 
